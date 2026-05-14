@@ -155,7 +155,7 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="flex gap-8 mt-10 justify-center lg:justify-start animate-slide-up delay-500">
+          {/* <div className="flex gap-8 mt-10 justify-center lg:justify-start animate-slide-up delay-500">
             {[
               { value: '1+', label: 'Years Exp.' },
               { value: '3+', label: 'Companies' },
@@ -166,7 +166,7 @@ export default function Hero() {
                 <div className="text-slate-500 text-sm mt-1">{stat.label}</div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Right — Avatar Card */}

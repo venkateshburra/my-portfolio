@@ -22,7 +22,7 @@ const projects = [
     title: 'Kings Aura',
     subtitle: 'E-Commerce Web Application',
     description: 'Complete e-commerce frontend application built from scratch with modern state management, product listing, cart, wishlist, authentication flow, checkout, and order management.',
-    tech: ['React.js', 'Redux Toolkit', 'Tailwind CSS', 'REST APIs'],
+    tech: ['React.js', 'Redux Toolkit', 'Tailwind CSS', 'REST APIs', 'Responsive Design'],
     link: 'https://thekingsaura.com',
     color: 'from-indigo-500 to-purple-600',
     icon: <FaShoppingCart className="text-white text-2xl" />,
@@ -38,7 +38,7 @@ const projects = [
     title: 'BuildNivas',
     subtitle: 'Admin & Vendor Panel',
     description: 'Production-level Admin and Vendor Panel application with new feature implementation, UI fixes, and improved responsiveness. Integrated REST APIs and optimized frontend workflows.',
-    tech: ['React.js', 'REST APIs', 'Responsive Design'],
+    tech: ['React.js', 'Nest.js', 'REST APIs', 'Tailwind CSS'],
     color: 'from-purple-500 to-pink-600',
     icon: <FaChartBar className="text-white text-2xl" />,
     features: [
