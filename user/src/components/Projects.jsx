@@ -21,8 +21,19 @@ const projects = [
   {
     title: 'Kings Aura',
     subtitle: 'E-Commerce Web Application',
-    description: 'Complete e-commerce frontend application built from scratch with modern state management, product listing, cart, wishlist, authentication flow, checkout, and order management.',
-    tech: ['React.js', 'Redux Toolkit', 'Tailwind CSS', 'REST APIs', 'Responsive Design'],
+    description: 'Production-ready full-stack e-commerce application built with React.js, Node.js, Express.js, MongoDB. Features include JWT authentication, REST APIs, product catalog, cart, wishlist, checkout, order management, and responsive UI with modern state management.',
+    tech: [
+      'React.js',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'PostgreSQL',
+      'Redux Toolkit',
+      'Tailwind CSS',
+      'JWT',
+      'REST APIs',
+      'Responsive Design'
+    ],
     link: 'https://thekingsaura.com',
     color: 'from-indigo-500 to-purple-600',
     icon: <FaShoppingCart className="text-white text-2xl" />,
