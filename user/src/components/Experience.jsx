@@ -18,17 +18,19 @@ function useInView(threshold = 0.1) {
 
 const experiences = [
   {
-    role: 'Frontend Developer',
+    role: 'Full-Stack Developer',
     company: 'Techpixe',
     period: '01/2026 – 05/2026',
     color: 'from-indigo-500 to-purple-600',
     icon: <FaRocket className="text-white text-lg" />,
     points: [
-      'Developed scalable and responsive web applications using React.js, Next.js, JavaScript, and Tailwind CSS.',
-      'Built and maintained e-commerce platforms with authentication, product management, cart, checkout, and order workflows.',
-      'Integrated REST APIs and implemented dynamic frontend-backend communication.',
+      'Engineered scalable full-stack e-commerce applications using React.js, Next.js, Node.js, Express.js, MongoDB, PostgreSQL, JavaScript, and Tailwind CSS.',
+      'Architected and integrated robust RESTful APIs to manage authentication, product catalogs, cart functionality, checkout processes, order management, and payment workflows.',
+      'Designed and optimized MongoDB and PostgreSQL database schemas to enhance data storage efficiency, indexing, and query performance.',
       'Collaborated with designers and backend teams to convert Figma designs into pixel-perfect interfaces.',
-      'Implemented Redux state management and modern frontend best practices for scalable applications.',
+      'Built reusable React components and managed application state using Redux Toolkit and React Hooks (useState, useEffect, useContext) improving scalability, maintainability, and frontend performance.',
+      'Integrated JWT-based authentication by implementing secure user login, protected routes, and authenticated API communication.',
+      'Delivered production-ready features focused on performance optimization, scalability, and adherence to high code quality standards',
     ],
   },
   {
