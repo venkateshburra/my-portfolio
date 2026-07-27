@@ -118,21 +118,30 @@ export default function Hero() {
             Passionate about crafting high-performance, user-friendly solutions.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-slide-up delay-400">
-            <a
-              href="#projects"
-              className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold hover:opacity-90 hover:scale-105 transition-all duration-300 shadow-lg shadow-indigo-500/30"
-            >
-              View My Work
-            </a>
-            <a
-              href="#contact"
-              className="px-8 py-3.5 rounded-xl gradient-border text-white font-semibold hover:bg-white/5 transition-all duration-300"
-            >
-              Get In Touch
-            </a>
-          </div>
+{/* CTA Buttons */}
+<div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-slide-up delay-400">
+  <a
+    href="#projects"
+    className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold hover:opacity-90 hover:scale-105 transition-all duration-300 shadow-lg shadow-indigo-500/30"
+  >
+    View My Work
+  </a>
+
+  <a
+    href="#contact"
+    className="px-8 py-3.5 rounded-xl gradient-border text-white font-semibold hover:bg-white/5 transition-all duration-300"
+  >
+    Get In Touch
+  </a>
+
+  <a
+    href="/Venkatesh_Burra_Resume.pdf"
+    download="Venkatesh_Burra_Resume.pdf"
+    className="px-8 py-3.5 rounded-xl gradient-border text-white font-semibold hover:bg-white/5 transition-all duration-300"
+  >
+    Download Resume
+  </a>
+</div>
 
           {/* Social Links */}
           <div className="flex gap-4 mt-8 justify-center lg:justify-start animate-slide-up delay-500">
