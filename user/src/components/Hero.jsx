@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FaReact, FaNodeJs, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { SiMongodb } from 'react-icons/si';
+import { SiExpress, SiMongodb, SiNextdotjs, SiPostgresql } from 'react-icons/si';
 import { MdEmail } from 'react-icons/md';
 import { BsTelephoneFill } from 'react-icons/bs';
 import { HiArrowDown } from 'react-icons/hi';
@@ -178,31 +178,63 @@ export default function Hero() {
           </div> */}
         </div>
 
-        {/* Right — Avatar Card */}
-        <div className="flex-shrink-0 animate-slide-right delay-200">
-          <div className="relative float-animation">
-            {/* Outer ring */}
-            <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full p-1 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 pulse-glow">
-              <div className="w-full h-full rounded-full bg-[#0f0f1a] flex items-center justify-center">
-                <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-br from-indigo-900/60 to-purple-900/60 flex flex-col items-center justify-center border border-indigo-500/20">
-                  <div className="text-7xl font-black gradient-text">BV</div>
-                  <div className="text-slate-400 text-sm mt-2 font-code">Full-Stack Dev</div>
-                </div>
-              </div>
-            </div>
+  {/* Right — Profile Image */}
+<div className="flex-shrink-0 animate-slide-right delay-200">
+  <div className="relative float-animation">
 
-            {/* Floating tech badges */}
-            <div className="absolute -top-4 -right-4 px-3 py-1.5 glass rounded-lg text-xs font-semibold text-cyan-300 border border-cyan-500/20 flex items-center gap-1.5 animate-fade-in delay-600">
-              <FaReact className="text-cyan-400 text-sm" /> React.js
-            </div>
-            <div className="absolute -bottom-4 -left-4 px-3 py-1.5 glass rounded-lg text-xs font-semibold text-green-300 border border-green-500/20 flex items-center gap-1.5 animate-fade-in delay-500">
-              <FaNodeJs className="text-green-400 text-sm" /> Node.js
-            </div>
-            <div className="absolute top-1/2 -right-8 px-3 py-1.5 glass rounded-lg text-xs font-semibold text-green-300 border border-green-500/20 flex items-center gap-1.5 animate-fade-in delay-400">
-              <SiMongodb className="text-green-400 text-sm" /> MongoDB
-            </div>
-          </div>
-        </div>
+    {/* Outer gradient ring */}
+    <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full p-1 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 pulse-glow">
+
+      {/* Dark inner border */}
+      <div className="w-full h-full rounded-full bg-[#0f0f1a] p-2">
+
+        {/* Profile Image */}
+        <img
+          src="/profile.jpg"
+          alt="Burra Venkatesh"
+          className="w-full h-full rounded-full object-cover object-center border border-indigo-500/20"
+        />
+
+      </div>
+    </div>
+
+    {/* React */}
+    <div className="absolute -top-4 -left-4 px-3 py-1.5 glass rounded-lg text-xs font-semibold text-cyan-300 border border-cyan-500/20 flex items-center gap-1.5 animate-fade-in delay-600">
+      <FaReact className="text-cyan-400 text-sm" />
+      React.js
+    </div>
+ <div className="absolute -top-4 -right-4 px-3 py-1.5 glass rounded-lg text-xs font-semibold text-slate-300 border border-slate-500/20 flex items-center gap-1.5 animate-fade-in delay-600">
+  <SiExpress className="text-slate-300 text-sm" />
+  Express.js
+</div>
+
+    {/* Node */}
+{/* MongoDB - Bottom Left */}
+<div className="absolute -bottom-4 -left-4 px-3 py-1.5 glass rounded-lg text-xs font-semibold text-green-300 border border-green-500/20 flex items-center gap-1.5 animate-fade-in delay-500">
+  <SiMongodb className="text-green-400 text-sm" />
+  MongoDB
+</div>
+
+{/* Node.js - Right */}
+<div className="absolute top-1/2 -right-8 px-3 py-1.5 glass rounded-lg text-xs font-semibold text-green-300 border border-green-500/20 flex items-center gap-1.5 animate-fade-in delay-400">
+  <FaNodeJs className="text-green-400 text-sm" />
+  Node.js
+</div>
+
+{/* PostgreSQL - Right */}
+<div className="absolute -bottom-4 -right-4 px-3 py-1.5 glass rounded-lg text-xs font-semibold text-blue-300 border border-blue-500/20 flex items-center gap-1.5 animate-fade-in delay-500">
+  <SiPostgresql className="text-blue-400 text-sm" />
+  PostgreSQL
+</div>
+
+    {/* Next.js */}
+    <div className="absolute top-1/2 -left-8 px-3 py-1.5 glass rounded-lg text-xs font-semibold text-slate-200 border border-white/20 flex items-center gap-1.5 animate-fade-in delay-500">
+      <SiNextdotjs className="text-white text-sm" />
+      Next.js
+    </div>
+
+  </div>
+</div>
       </div>
 
       {/* Scroll indicator */}

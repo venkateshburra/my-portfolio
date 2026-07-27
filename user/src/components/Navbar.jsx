@@ -71,13 +71,15 @@ export default function Navbar() {
         </ul>
 
         {/* CTA */}
-        <a
-          href="mailto:burravenkatesh284@gmail.com"
-          className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-sm font-semibold hover:opacity-90 hover:scale-105 transition-all duration-300 shadow-lg shadow-indigo-500/25"
-        >
-          <MdEmail className="text-base" />
-          Hire Me
-        </a>
+<a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=burravenkatesh284@gmail.com&su=Job%20Opportunity"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-sm font-semibold hover:opacity-90 hover:scale-105 transition-all duration-300 shadow-lg shadow-indigo-500/25"
+>
+  <MdEmail className="text-base" />
+  Hire Me
+</a>
 
         {/* Mobile Menu Button */}
         <button

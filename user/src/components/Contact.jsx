@@ -4,6 +4,8 @@ import { BsTelephoneFill } from 'react-icons/bs';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { HiChevronRight } from 'react-icons/hi';
 import { RiMapPinLine } from 'react-icons/ri';
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
 
 function useInView(threshold = 0.1) {
   const ref = useRef(null);
@@ -54,20 +56,50 @@ export default function Contact() {
   const [ref, inView] = useInView();
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
-    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`);
-    window.open(`mailto:burravenkatesh284@gmail.com?subject=${subject}&body=${body}`);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
+  try {
+    setLoading(true);
+
+    await emailjs.send(
+      'service_he4h4q7',
+      'template_4f3glqc',
+      {
+        name: form.name,
+        email: form.email,
+        message: form.message,
+      },
+      'oqBvBhtOecWd8yP_D'
+    );
+
+    toast.success('Message sent successfully!');
+
+    setForm({
+      name: '',
+      email: '',
+      message: '',
+    });
+  } catch (error) {
+    console.error('EmailJS error:', error);
+
+    toast.error('Failed to send message. Please try again.');
+  } finally {
+    setLoading(false);
+  }
+};
   return (
     <section id="contact" className="py-24 bg-[#0d0d18] relative">
+            <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 3000,
+        }}
+      />
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl" />
       </div>
@@ -175,20 +207,32 @@ export default function Contact() {
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  className={`w-full py-3.5 rounded-xl font-semibold text-white transition-all duration-300 flex items-center justify-center gap-2 ${
-                    submitted
-                      ? 'bg-green-500 scale-95'
-                      : 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:opacity-90 hover:scale-[1.02] shadow-lg shadow-indigo-500/25'
-                  }`}
-                >
-                  {submitted ? (
-                    <><MdCheckCircle className="text-lg" /> Message Sent!</>
-                  ) : (
-                    <><MdSend className="text-lg" /> Send Message</>
-                  )}
-                </button>
+       <button
+  type="submit"
+  disabled={loading}
+  className={`w-full py-3.5 rounded-xl font-semibold text-white
+    transition-all duration-300 flex items-center justify-center gap-2
+    bg-gradient-to-r from-indigo-500 to-purple-600
+    shadow-lg shadow-indigo-500/25
+    ${
+      loading
+        ? 'opacity-70 cursor-not-allowed'
+        : 'hover:opacity-90 hover:scale-[1.02]'
+    }
+  `}
+>
+  {loading ? (
+    <>
+      <span className="w-5 h-5 border-4 border-white/30 border-t-white rounded-full animate-spin" />
+      Sending...
+    </>
+  ) : (
+    <>
+      <MdSend className="text-lg" />
+      Send Message
+    </>
+  )}
+</button>
               </div>
             </form>
           </div>

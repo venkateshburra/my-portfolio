@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { FaExternalLinkAlt, FaGithub, FaShoppingCart, FaChartBar, FaFilm, FaTwitter } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub, FaShoppingCart, FaChartBar, FaFilm, FaTwitter, FaChartLine } from 'react-icons/fa';
 import { MdExpandMore, MdExpandLess } from 'react-icons/md';
 import { HiCheckCircle } from 'react-icons/hi';
 
@@ -46,6 +46,48 @@ const projects = [
     ],
   },
   {
+  title: 'Mini CRM Opportunity Tracker',
+  subtitle: 'Full-Stack Web Application',
+  description:
+    'Production-ready CRM application for managing sales opportunities with secure authentication, complete CRUD operations, search, filtering, sorting, and pagination.',
+  tech: [
+    'React',
+    'Node.js',
+    'Express',
+    'MongoDB',
+    'Tailwind CSS',
+    'JWT',
+    'Axios',
+  ],
+  link: 'https://ceofactory-crm.vercel.app/',
+  color: 'from-indigo-500 to-purple-500',
+  icon: <FaChartLine className="text-white text-2xl" />,
+  features: [
+    'JWT authentication & authorization',
+    'Opportunity CRUD operations',
+    'Search, filtering & sorting',
+    'Pagination',
+    'Owner-based authorization',
+    'Responsive UI',
+  ],
+},
+  {
+    title: 'Twitter Clone',
+    subtitle: 'Full Stack Web Application',
+    description: 'Full-stack Twitter clone with JWT authentication, user registration/login, tweet creation, and feed display. Built with responsive UI and efficient data loading.',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'React Query'],
+    link: 'https://twitter-clone-ocp4.onrender.com',
+    color: 'from-blue-500 to-cyan-500',
+    icon: <FaTwitter className="text-white text-2xl" />,
+    features: [
+      'JWT authentication',
+      'Tweet CRUD operations',
+      'User profiles',
+      'Real-time feed',
+      'Responsive UI',
+    ],
+  },
+  {
     title: 'BuildNivas',
     subtitle: 'Admin & Vendor Panel',
     description: 'Production-level Admin and Vendor Panel application with new feature implementation, UI fixes, and improved responsiveness. Integrated REST APIs and optimized frontend workflows.',
@@ -76,22 +118,7 @@ const projects = [
       'Fast loading',
     ],
   },
-  {
-    title: 'Twitter Clone',
-    subtitle: 'Full Stack Web Application',
-    description: 'Full-stack Twitter clone with JWT authentication, user registration/login, tweet creation, and feed display. Built with responsive UI and efficient data loading.',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'React Query'],
-    link: 'https://twitter-clone-ocp4.onrender.com',
-    color: 'from-blue-500 to-cyan-500',
-    icon: <FaTwitter className="text-white text-2xl" />,
-    features: [
-      'JWT authentication',
-      'Tweet CRUD operations',
-      'User profiles',
-      'Real-time feed',
-      'Responsive UI',
-    ],
-  },
+
 ];
 
 function ProjectCard({ project, index, inView }) {
