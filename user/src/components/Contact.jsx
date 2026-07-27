@@ -124,28 +124,38 @@ const handleSubmit = async (e) => {
               Let's <span className="gradient-text">connect</span>
             </h3>
 
-            <div className="space-y-4">
-              {contactInfo.map((info, i) => (
-                <a
-                  key={i}
-                  href={info.href}
-                  target={info.href.startsWith('http') ? '_blank' : undefined}
-                  rel="noreferrer"
-                  className="flex items-center gap-4 p-4 glass rounded-xl border border-white/5 hover:border-indigo-500/30 transition-all duration-300 group card-hover"
-                >
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${info.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
-                    {info.icon}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-slate-500 text-xs font-medium uppercase tracking-wider">{info.label}</div>
-                    <div className="text-white font-medium mt-0.5 group-hover:text-indigo-400 transition-colors text-sm truncate">
-                      {info.value}
-                    </div>
-                  </div>
-                  <HiChevronRight className="text-slate-600 group-hover:text-indigo-400 transition-colors flex-shrink-0" />
-                </a>
-              ))}
-            </div>
+      <div className="space-y-4 w-full min-w-0">
+  {contactInfo.map((info, i) => (
+    <a
+      key={i}
+      href={info.href}
+      target={info.href.startsWith('http') ? '_blank' : undefined}
+      rel="noreferrer"
+      className="w-full min-w-0 flex items-center gap-3 sm:gap-4 p-3 sm:p-4 glass rounded-xl border border-white/5 hover:border-indigo-500/30 transition-all duration-300 group card-hover overflow-hidden"
+    >
+      {/* Icon */}
+      <div
+        className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${info.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}
+      >
+        {info.icon}
+      </div>
+
+      {/* Content */}
+      <div className="flex-1 min-w-0 overflow-hidden">
+        <div className="text-slate-500 text-xs font-medium uppercase tracking-wider">
+          {info.label}
+        </div>
+
+        <div className="text-white font-medium mt-0.5 group-hover:text-indigo-400 transition-colors text-xs sm:text-sm truncate">
+          {info.value}
+        </div>
+      </div>
+
+      {/* Arrow */}
+      <HiChevronRight className="text-slate-600 group-hover:text-indigo-400 transition-colors flex-shrink-0" />
+    </a>
+  ))}
+</div>
 
             {/* Availability badge */}
             <div className="mt-8 p-4 glass rounded-xl border border-green-500/20">
