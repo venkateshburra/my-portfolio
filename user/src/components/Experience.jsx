@@ -67,7 +67,7 @@ export default function Experience() {
   const [activeExp, setActiveExp] = useState(0);
 
   return (
-    <section id="experience" className="py-24 bg-[#0d0d18] relative">
+    <section id="experience" className="py-24 bg-[#0d0d18] relative overflow-x-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl" />
       </div>

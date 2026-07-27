@@ -29,7 +29,7 @@ export default function About() {
   const [ref, inView] = useInView();
 
   return (
-    <section id="about" className="py-24 mesh-bg relative">
+    <section id="about" className="py-24 mesh-bg relative overflow-x-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-72 h-72 bg-purple-600/5 rounded-full blur-3xl" />
       </div>

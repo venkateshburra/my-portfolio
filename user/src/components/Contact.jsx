@@ -93,7 +93,7 @@ const handleSubmit = async (e) => {
   }
 };
   return (
-    <section id="contact" className="py-24 bg-[#0d0d18] relative">
+    <section id="contact" className="py-24 bg-[#0d0d18] relative overflow-x-hidden">
             <Toaster
         position="top-right"
         toastOptions={{
